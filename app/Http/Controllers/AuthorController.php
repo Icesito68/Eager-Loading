@@ -10,6 +10,6 @@ class AuthorController extends Controller
     {
         $authors = Author::with('books')->get();
 
-        return view('index', compact('authors'));
+        return view('authors', compact('authors'));
     }
 }
