@@ -19,7 +19,6 @@ class CategoryFactory extends Factory
     {
         return [
             'name' => $this->faker->word,
-            'book_id' => Book::factory(),        
         ];
     }
 }

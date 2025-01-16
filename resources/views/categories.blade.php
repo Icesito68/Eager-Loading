@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categorias y libros</title>
+    <title>Libros de la Categoría</title>
 </head>
 
 <body>
-    <h1>Categorias y libros</h1>
-    @foreach ($categories as $category)
-        <h2>{{ $category->name }}</h2>
-        <ul>
+    <h1>Libros de la Categoría: {{ $category->name }}</h1>
+
+    <ul>
+        @foreach ($category->books as $book)
             <li>{{ $book->title }}</li>
-        </ul>
-    @endforeach
+        @endforeach
+    </ul>
 </body>
 
 </html>

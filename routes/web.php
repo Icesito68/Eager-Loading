@@ -10,4 +10,4 @@ Route::get('/', function () {
 
 Route::get('/authors', [AuthorController::class, 'index']);
 
-Route::get("categories", [CategoryController::class, "index"]);
+Route::get('/categories/{id}', [CategoryController::class, 'show'])->name('categories');
